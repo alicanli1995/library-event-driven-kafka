@@ -8,8 +8,14 @@
 </p>
 
 # Technology Stack :
+
  > Spring Boot
 
  > Apache Kafka
 
  > Hazelcast
+
+ > Integration And Unit Testing
+
+ > Spring Data
+
