@@ -1,2 +1,15 @@
-# zer0-to-her0-kafka
-I'm learning kafka with spring boot. I'm sharing my learning steps this repository.
+# Library event project with apache kafka -> event driven with microservices architecture
+
+# Diagram
+
+
+<p align="center">
+<img src="img/diagram.png" alt="ci" width="900" class="center">
+</p>
+
+# Technology Stack :
+ > Spring Boot
+
+ > Apache Kafka
+
+ > Hazelcast
