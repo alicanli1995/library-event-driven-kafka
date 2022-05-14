@@ -1,0 +1,35 @@
+start zookeper->
+
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+start kafka ->
+
+kafka-server-start.bat ..\..\config\server.properties
+
+create topic -> 
+
+kafka-topics.bat --create --topic test-topic --replication-factor 1 --partitions 4 --bootstrap-server localhost:9092
+
+How to instantiate a Console Producer -> 
+Without Key -> 
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic
+
+With Key -> 
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
+
+How to instantiate a Console Consumer -> 
+Without Key -> 
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+
+With Key -> 
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning -property "key.separator= - " --property "print.key=true"
+
+
+List of topics ->
+
+kafka-topics.bat --bootstrap-server localhost:9092 --list
+
