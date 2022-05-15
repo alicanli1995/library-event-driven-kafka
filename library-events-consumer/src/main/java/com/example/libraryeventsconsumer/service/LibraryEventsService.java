@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.dao.RecoverableDataAccessException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,8 +22,15 @@ public class LibraryEventsService {
     private final ObjectMapper objectMapper;
 
     public void processLibraryEvent(ConsumerRecord<Integer,String > records) throws JsonProcessingException {
+
         var event = objectMapper.readValue(records.value(), LibraryEvent.class);
         log.info("libraryEvent -> {}", event );
+
+        if(event.getLibraryEventId()!=null && ( event.getLibraryEventId()==999 )){
+            throw new RecoverableDataAccessException("Temporary Network Issue");
+        }
+
+
         if (event.getLibraryEventType().equals(LibraryEventType.NEW)) {
             save(event);
         }

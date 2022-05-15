@@ -16,9 +16,11 @@ public class LibraryEventConsumer {
     private final LibraryEventsService libraryEventsService;
 
 
-    @KafkaListener(topics = {"library-events"})
+    @KafkaListener(topics = {"library-events"} ,
+            groupId = "library-events-listener-group"
+    )
     public void onMessage(ConsumerRecord<Integer,String > records) throws JsonProcessingException {
-        log.info("Consumer Record -> " + records);
+        log.info("Consumer Record ReTry Topic -> " + records);
         libraryEventsService.processLibraryEvent(records);
     }
 
