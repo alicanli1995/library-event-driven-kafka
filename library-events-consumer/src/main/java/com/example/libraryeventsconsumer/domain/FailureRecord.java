@@ -31,7 +31,7 @@ public class FailureRecord {
 
     private String exception_record;
 
-    private String status_record;
+    private String status;
 
 
 }

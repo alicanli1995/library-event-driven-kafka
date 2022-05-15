@@ -28,6 +28,5 @@ public class FailureRecordService {
                 exception.getCause().getMessage(),
                 recordStatus);
         failureRecordRepository.save(failureRecord);
-
     }
 }
