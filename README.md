@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<img src="img/diagram.png" alt="ci" width="900" class="center">
+<img src="img/diagram-new.png" alt="ci" width="900" class="center">
 </p>
 
 # Technology Stack :
