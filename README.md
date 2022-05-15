@@ -15,7 +15,7 @@
 
  > Apache Kafka
 
- > Cassandra
+ > MaribaDB on AWS
 
  > Integration And Unit Testing
 
