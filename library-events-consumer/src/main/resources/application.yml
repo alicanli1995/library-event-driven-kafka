@@ -25,9 +25,9 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
-    url: jdbc:mariadb://book.cylqi487h61o.us-east-1.rds.amazonaws.com:3306/book
-    username: admin
-    password: hacker132
+    url: jdbc:mariadb://URL:3306/book
+    username: USERNAME
+    password: PASSWORD
   jpa:
     show-sql: true
     hibernate:
