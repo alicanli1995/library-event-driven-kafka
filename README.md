@@ -15,9 +15,10 @@
 
  > Apache Kafka
 
- > Hazelcast
+ > Cassandra
 
  > Integration And Unit Testing
 
  > Spring Data
-
+ 
+ 
