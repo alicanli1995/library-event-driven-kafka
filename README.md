@@ -1,7 +1,5 @@
 # Library event project with apache kafka -> event driven with microservices architecture
 
-# Producer has been completed. Consumer is deploying... 
-
 # Diagram
 
 
@@ -21,4 +19,4 @@
 
  > Spring Data
  
- > Message security with ssl on kafka .... 
+ 
