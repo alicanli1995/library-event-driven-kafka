@@ -33,3 +33,5 @@ List of topics ->
 
 kafka-topics.bat --bootstrap-server localhost:9092 --list
 
+
+kafka-configs.bat --bootstrap-server localhost:9092 --entity-type topics --entity-name library-events --alter --add-config min.insync.replicas=2
